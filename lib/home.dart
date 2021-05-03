@@ -11,7 +11,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:drink_app/database.dart';
 
 final GoogleSignIn googleSignIn = GoogleSignIn();
-//FirebaseStorage storage = FirebaseStorage.instance;
 final Reference storageRef = FirebaseStorage.instance.ref();
 final usersRef = Firestore.instance.collection('users');
 final graphsRef = Firestore.instance.collection('graphs');
@@ -122,13 +121,9 @@ class _HomeState extends State<Home> {
       body: Container(
         child: PageView(
           children: <Widget>[
-            MainPage(
-                //profileId: currentUser?.id),
-                ),
+            MainPage(),
             GraphPage(),
-            ProfilePage(
-                // profileId: currentUser?.id
-                ),
+            ProfilePage(),
           ],
           controller: pageController,
           onPageChanged: onPageChanged,
@@ -172,17 +167,11 @@ class _HomeState extends State<Home> {
                 )),
           ]),
     );
-    // return RaisedButton(
-    //   child: Text('Logout'),
-    //   onPressed: logout,
-    // );
   }
 
   Scaffold buildUnAuthScreen() {
     var size = MediaQuery.of(context).size;
 
-    // globalSize = size;
-    // globalCtx = context;
     return Scaffold(
       backgroundColor: Color(0xff231b10),
       body: SingleChildScrollView(

@@ -14,7 +14,7 @@ class _ProfilePageState extends State<ProfilePage>
   @override
   bool get wantKeepAlive => true;
 
-  final String currentUserId = currentUser?.id; //logged in current user
+  final String currentUserId = currentUser?.id;
 
   editProfile() {
     Navigator.push(
@@ -53,14 +53,6 @@ class _ProfilePageState extends State<ProfilePage>
         ),
       ),
     );
-  }
-
-  buildProfileButton() {
-    // viewing your own profile - should show edit profile button
-    bool isProfileOwner = true; //currentUserId == widget.profileId;
-    if (isProfileOwner) {
-      return buildButton(text: "Edit Profile", function: editProfile);
-    }
   }
 
   buildProfileHeader() {
@@ -157,8 +149,6 @@ class _ProfilePageState extends State<ProfilePage>
               colors: [
                 Color(0xfff0c459),
                 Color(0xff975711),
-                // Theme.of(context).primaryColorLight,
-                // Theme.of(context).primaryColorDark,
               ],
             ),
           ),

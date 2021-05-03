@@ -44,15 +44,11 @@ class _CreateAccountState extends State<CreateAccount> {
               colors: [
                 Color(0xfff0c459),
                 Color(0xff975711),
-                // Theme.of(context).primaryColorLight,
-                // Theme.of(context).primaryColorDark,
               ],
             ),
           ),
         ),
       ),
-      // header(context,
-      //     titleText: "Set up your profile", removeBackbutton: true),
       body: ListView(
         children: <Widget>[
           Container(

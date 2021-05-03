@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:drink_app/database.dart';
-import 'package:drink_app/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -35,8 +33,6 @@ class _MainPageState extends State<MainPage>
     fltNotification = new FlutterLocalNotificationsPlugin();
     fltNotification.initialize(initializationSettings,
         onSelectNotification: notificationSelected);
-    // CurrentUser _currentUser = Provider.of<CurrentUser>(context, listen: false);
-    // await _currentUser.onStartUp();
   }
 
   Future notificationSelected(String payload) async {
@@ -73,10 +69,8 @@ class _MainPageState extends State<MainPage>
           _counter--;
           _minutes = _counter ~/ 60;
           _seconds = (_counter % 60);
-          // print(_counter);
         } else if (_counter <= 0 && _stopTimer == false) {
           _showNotification();
-          //TODO : Trigger Notification
           _counter = v * 60;
           _counter--;
           _minutes = _counter ~/ 60;
@@ -94,7 +88,6 @@ class _MainPageState extends State<MainPage>
     if (_stopTimer == true) {
       return 0.0;
     } else {
-      //print(_circularValue);
       return _counter / (_circularValue);
     }
   }
@@ -186,8 +179,6 @@ class _MainPageState extends State<MainPage>
 
                 _startTimer();
                 if (_stopTimer == false) {
-                  // OurDatabase().getContext(context);
-                  // await CurrentUser().upGraph();
                   await Database().updateGraph();
                 }
               },
@@ -248,8 +239,6 @@ class _MainPageState extends State<MainPage>
                   colors: [
                     Colors.orange,
                     Colors.red,
-                    // Color(0xfff0c459),
-                    // Color(0xff975711),
                   ],
                 ),
                 circularStrokeCap: CircularStrokeCap.round,

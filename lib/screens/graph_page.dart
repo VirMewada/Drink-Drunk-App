@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:drink_drunk/services/database.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:drink_app/database.dart';
 
@@ -10,7 +9,6 @@ class GraphPage extends StatefulWidget {
 
 var globalSize;
 double value = 4;
-//Database database = Database();
 
 class _GraphPageState extends State<GraphPage> {
   @override
@@ -26,7 +24,6 @@ class _GraphPageState extends State<GraphPage> {
           padding:
               const EdgeInsets.only(top: 40, left: 14, right: 20, bottom: 14),
           child: Container(
-            //height: size.height * 0.5,
             alignment: Alignment.center,
             child: Column(
               children: [
@@ -38,9 +35,7 @@ class _GraphPageState extends State<GraphPage> {
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).canvasColor.toString() == "brown"
-                          ? Colors.white
-                          : Colors.white),
+                      color: Colors.white),
                 ),
                 SizedBox(
                   height: 10,
@@ -56,41 +51,6 @@ class _GraphPageState extends State<GraphPage> {
                 SizedBox(
                   height: 25,
                 ),
-                // SliderTheme(
-                //   data: SliderTheme.of(context).copyWith(
-                //     activeTrackColor: Colors.orange,
-                //     inactiveTrackColor: Color(0xfff0c459),
-                //     trackShape: RoundedRectSliderTrackShape(),
-                //     trackHeight: 10,
-                //     thumbColor: Color(0xff975711),
-                //     overlayColor: Colors.amber.withAlpha(70),
-                //     thumbShape: RoundSliderThumbShape(
-                //         enabledThumbRadius: 12, elevation: 5),
-                //     tickMarkShape: RoundSliderTickMarkShape(),
-                //     activeTickMarkColor: Colors.white,
-                //     inactiveTickMarkColor: Color(0xfff0c459),
-                //     valueIndicatorShape: PaddleSliderValueIndicatorShape(),
-                //     valueIndicatorColor: Colors.orange,
-                //     valueIndicatorTextStyle:
-                //         TextStyle(color: Colors.white, fontSize: 20),
-                //   ),
-                //   child: Slider(
-                //     min: 14,
-                //     max: 30,
-                //     value: _value,
-                //     divisions: 8,
-                //     label: "$_value",
-                //     onChanged: (value) {
-                //       setState(() {
-                //         _value = value;
-                //       });
-                //     },
-                //   ),
-                // ),
-                // Text(
-                //   "Adjust Y axis.",
-                //   style: TextStyle(fontSize: 15, color: Colors.white),
-                // ),
               ],
             ),
           ),
@@ -123,7 +83,6 @@ class ChartSelection extends StatelessWidget {
             ),
             borderData: FlBorderData(
               show: false,
-              //border: Border.all(color: Colors.amber, width: 3),
             ),
             backgroundColor: Colors.transparent,
             titlesData: FlTitlesData(
@@ -215,15 +174,6 @@ class ChartSelection extends StatelessWidget {
             maxY: ySliderValue(),
             lineBarsData: [
               LineChartBarData(
-                  // spots: [
-                  //   FlSpot(1, 3),
-                  //   FlSpot(2, 4),
-                  //   FlSpot(4, 5.5),
-                  //   FlSpot(5, 0),
-                  //   FlSpot(8, 4),
-                  //   FlSpot(12, 3),
-                  // ],
-
                   spots: dataList.length > 0 ? dataList : [FlSpot(0.0, 0.0)],
                   isCurved: true,
                   colors: gradientColors,
