@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "596799731553",
+    "project_id": "drink-drunk-app-dc9da",
+    "storage_bucket": "drink-drunk-app-dc9da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596799731553:android:f08a09a7e595e69c987720",
+        "android_client_info": {
+          "package_name": "com.example.drink_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596799731553-pa23ueesrjdom7k9ejcf6pnkvnqsmf7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drink_app",
+            "certificate_hash": "aa787c7ebd2591d978e315bb4de2d5d3468891ac"
+          }
+        },
+        {
+          "client_id": "596799731553-52c5bi2qr18eonurjc1nrb2t848aqmnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyEVEGch6iGJxCRsa8lLtVzUOgk5uHqjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596799731553-52c5bi2qr18eonurjc1nrb2t848aqmnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
